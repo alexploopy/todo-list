@@ -14,8 +14,9 @@
     "pages:deploy": "wrangler pages deploy ./build/client"
   },
   "dependencies": {
-    "@remix-run/node": "^2.16.2",
     "@remix-run/cloudflare": "^2.16.2",
+    "@remix-run/cloudflare-pages": "^2.16.3",
+    "@remix-run/node": "^2.16.2",
     "@remix-run/react": "^2.16.2",
     "@remix-run/serve": "^2.16.2",
     "bcryptjs": "^3.0.2",

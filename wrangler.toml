@@ -1,5 +1,5 @@
 name = "todo-io"
-compatibility_date = "2024-03-28"
+compatibility_date = "2024-09-23"
 compatibility_flags = [
   "nodejs_compat",
   "nodejs_module"
@@ -11,4 +11,8 @@ main = "./functions/_worker.js"
 bucket = "./build/client"
 
 [build]
-command = "npm run build" 
+command = "npm run build"
+
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js"] 

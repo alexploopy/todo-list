@@ -7,6 +7,8 @@ const handleRequest = createPagesFunctionHandler({
   getLoadContext: (context) => context.env,
 })
 
-export const onRequest = async (context) => {
-  return handleRequest(context)
+export default {
+  async fetch(request, env, ctx) {
+    return handleRequest({ request, env, ctx })
+  }
 } 
