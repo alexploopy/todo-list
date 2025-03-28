@@ -5,12 +5,10 @@ compatibility_flags = [
   "nodejs_module"
 ]
 
-[[build.upload.rules]]
-type = "ESModule"
-globs = ["**/*.js"]
-
-[build]
-command = "npm run build"
+main = "./functions/_worker.js"
 
 [site]
-bucket = "./build/client" 
+bucket = "./build/client"
+
+[build]
+command = "npm run build" 
