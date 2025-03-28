@@ -2,5 +2,7 @@ name = "todo-io"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
+main = "build/server/index.js"
+
 [site]
 bucket = "./build/client" 
