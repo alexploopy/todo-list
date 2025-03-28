@@ -14,7 +14,7 @@ export default {
       
       // Handle static assets
       if (url.pathname.startsWith('/assets/')) {
-        const response = await env.ASSETS.fetch(request)
+        const response = await env._STATIC_CONTENT.fetch(request)
         if (response.status === 404) {
           return new Response('Asset not found', { status: 404 })
         }
