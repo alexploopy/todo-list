@@ -1,8 +1,7 @@
 name = "todo-io"
 compatibility_date = "2024-09-23"
 compatibility_flags = [
-  "nodejs_compat",
-  "nodejs_module"
+  "nodejs_compat"
 ]
 
 main = "./functions/_worker.js"
