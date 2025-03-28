@@ -24,15 +24,17 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full bg-white">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className="h-full bg-white text-gray-900 antialiased">
+        <div className="min-h-full">
+          {children}
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -41,5 +43,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
+      <Outlet />
+    </div>
+  );
 }

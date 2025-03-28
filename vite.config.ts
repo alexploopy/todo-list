@@ -16,7 +16,15 @@ export default defineConfig({
         v3_relativeSplatPath: true,
         v3_throwAbortReason: true,
         v3_singleFetch: true,
-        v3_lazyRouteDiscovery: true,
+        v3_lazyRouteDiscovery: false,
+      },
+      routes: async (defineRoutes) => {
+        return defineRoutes((route) => {
+          route("/", "routes/_index.tsx");
+          route("/auth/login", "routes/auth/login.tsx");
+          route("/auth/register", "routes/auth/register.tsx");
+          route("/tasks", "routes/tasks.tsx");
+        });
       },
     }),
     tsconfigPaths(),
