@@ -10,6 +10,7 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
     "pages:build": "remix vite:build",
+    "pages:dev": "wrangler pages dev ./build/client --compatibility-date=2024-03-28 --compatibility-flag=nodejs_compat --compatibility-flag=nodejs_module",
     "pages:deploy": "wrangler pages deploy ./build/client"
   },
   "dependencies": {
